@@ -1,11 +1,21 @@
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita el envío tradicional
+let index = 0;
 
-    let nombre = document.getElementById("nombre").value;
-    let email = document.getElementById("email").value;
-    let mensaje = document.getElementById("mensaje").value;
-
-    let mailtoLink = `mailto:contacto@educadorcanino.com?subject=Consulta de ${nombre}&body=Nombre: ${nombre}%0AEmail: ${email}%0A%0AMensaje:%0A${mensaje}`;
+function moverCarrusel(direction) {
+    const slide = document.querySelector('.carousel-slide');
+    const images = document.querySelectorAll('.carousel-slide img');
+    const totalImages = images.length;
     
-    window.location.href = mailtoLink;
-});
+    index += direction;
+
+    if (index < 0) {
+        index = totalImages - 1;
+    } else if (index >= totalImages) {
+        index = 0;
+    }
+
+    const offset = -index * 100; 
+    slide.style.transform = `translateX(${offset}%)`;
+}
+
+// Cambio automático cada 4 segundos
+setInterval(() => moverCarrusel(1), 4000);
