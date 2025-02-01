@@ -131,3 +131,69 @@ footer {
     transform: scale(1.1);
     opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .servicio, #precios, #bio, #articulos {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    #mini-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    #imagenes {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .imagen-container img {
+        max-width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    #mini-header {
+        font-size: 0.8em;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
